@@ -1,0 +1,93 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #1e1e1e; /* VS Code Dark Background */
+  color: #d4d4d4; /* VS Code Text Color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Header Styling */
+header {
+  background-color: #007acc; /* VS Code Blue */
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  background-color: #252526; /* VS Code Panel Background */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Ad Section */
+.ad-section {
+  flex: 1 1 calc(30% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1e1e;
+  border: 1px solid #3c3c3c;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.ad-section h2 {
+  font-size: 1.4rem;
+  color: #007acc;
+  margin-bottom: 10px;
+}
+
+/* Ad Slot */
+.ad-slot {
+  background-color: #333333; /* Placeholder Background */
+  border: 2px dashed #555555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #888888;
+  font-size: 1rem;
+  height: 100px; /* Default Ad Height */
+  width: 100%; /* Full Width */
+}
+
+.banner-ad .ad-slot {
+  height: 60px; /* Banner Ad Height */
+}
+
+.video-ad .ad-slot {
+  height: 300px; /* Video Ad Height */
+  width: 500px; /* Video Ad Width */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ad-section {
+    flex: 1 1 100%;
+  }
+
+  .video-ad .ad-slot {
+    width: 100%; /* Full Width for Smaller Screens */
+    height: auto; /* Adjust Height */
+  }
+}
